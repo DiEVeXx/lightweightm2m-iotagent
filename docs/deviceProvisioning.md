@@ -80,7 +80,7 @@ The following request provision the device with device ID `robot1`:
 
 ```bash
 (curl localhost:4041/iot/devices -s -S --header 'Content-Type: application/json' \
-  --header 'Accept: application/json' --header 'fiware-service: factory' --header 'fiware-servicepath: /robots' \
+  --header 'Accept: application/json' --header 'fiware-service: Factory' --header 'fiware-servicepath: /robots' \
   -d @- | python -mjson.tool) <<EOF
 {
   "devices": [
@@ -189,7 +189,7 @@ Now you should be able to see the Entity in your Context Broker. You can do that
 
 ```bash
 (curl http://192.168.56.101:1026/v1/queryContext -s -S --header 'Content-Type: application/json' \
- --header 'Accept: application/json' --header 'fiware-service: factory' --header 'fiware-servicepath: /robots' \
+ --header 'Accept: application/json' --header 'fiware-service: Factory' --header 'fiware-servicepath: /robots' \
  -d @- | python -mjson.tool) <<EOF
 {
     "entities": [
@@ -223,7 +223,7 @@ the following case:
 
 ```bash
 (curl http://192.168.56.101:1026/v1/queryContext -s -S --header 'Content-Type: application/json' \
- --header 'Accept: application/json' --header 'fiware-service: factory' --header 'fiware-servicepath: /robots' \
+ --header 'Accept: application/json' --header 'fiware-service: Factory' --header 'fiware-servicepath: /robots' \
  -d @- | python -mjson.tool) <<EOF
 {
     "entities": [
@@ -246,7 +246,7 @@ just update the command attribute in the Context Broker entity, with the followi
 
 ```bash
 (curl http://192.168.56.101:1026/v1/updateContext -s -S --header 'Content-Type: application/json' \
- --header 'Accept: application/json' --header 'fiware-service: factory' --header 'fiware-servicepath: /robots' \
+ --header 'Accept: application/json' --header 'fiware-service: Factory' --header 'fiware-servicepath: /robots' \
  -d @- | python -mjson.tool) <<EOF
 {
     "contextElements": [
